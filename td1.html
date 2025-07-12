@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        #regForm,#loginForm,fpForm
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 bg-light mx-auto p-4 mt-5">
+               <div class="btn-group">
+                <a href="#" class="btn btn-warning" onclick="rdemo()">Register</a>
+                <a href="#" class="btn btn-warning" onclick="ldemo()">Login</a>
+                </div>
+                <div id="regForm">
+                   <div class="text-center" fs-3>Register Form</div>
+                   Name<input type="text" class="form-control mb-1"/>
+                   Email<input type="email" class="form-control mb-1"/>
+                   Mobile<input type="number" class="form-control mb-1"/>
+                   Message<input type="text" class="form-control mb-1"/>
+                   <input type="submit" class="btn btn-warning" value="SAVE"/>
+                </div>
+                <div id="loginForm">
+                    <div class="text-center fs-3">Login Form</div>
+                    Email<input type="email" class="form-control mb-1"/>
+                    Password<input type="text" class="form-control mb-1" />
+                    <a href="#" onclick="fdemo()">Forget Password</a><br/>
+                    <input type="submit" class="btn btn-warning" value="Login"/>
+                </div>
+                <div id="fpForm">
+                    <div class="text-center fs-3">Forget Password</div>
+                    Enter Your Register Mobile No: <input type="text" onclick="fp" class="form-control mb-1"/>
+                    <input type="submit" class="btn btn-warning" value="Sent otp">
+                 </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var rform=document.getElementById("regForm")
+        var lform=document.getElementById("loginForm")
+        var fform=document.getElementById("fpForm")
+        function rdemo()
+        {
+            rform.style.display="block"
+            lform.style.display="none"
+            fform.style.display="none"
+        }
+        function ldemo()
+        {
+            rform.style.display="none"
+            lform.style.display="block"
+            fform.style.display="none"   
+        }
+        function fdemo()
+        {
+            rform.style.display="none"
+            lform.style.display="none"
+            fform.style.display="block"
+        }
+    </script>
+</body>
+</html>
